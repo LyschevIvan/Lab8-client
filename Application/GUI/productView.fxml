@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            spacing="10">
+    <HBox>
+        <Label fx:id="keyLabel" minWidth="80" alignment="CENTER" />
+        <TextField fx:id="keyField" />
+        <Label fx:id="keyRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="idLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="idField" editable="false"/>
+        <Label fx:id="idRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="nameLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="nameField"/>
+        <Label fx:id="nameRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="xLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="xField"/>
+        <Label fx:id="xRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="yLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="yField"/>
+        <Label fx:id="yRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="priceLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="priceField"/>
+        <Label fx:id="priceRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="partNumberLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="partNumberField"/>
+        <Label fx:id="pNumberRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="manCostLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="manCostField"/>
+        <Label fx:id="manCostRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="uomLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="uomField"/>
+        <Label fx:id="uomRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="ownerNameLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="ownerNameField"/>
+        <Label fx:id="ownerNameRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="ownerHeightLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="ownerHeightField"/>
+        <Label fx:id="heightRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="ownerWeightLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="ownerWeightField"/>
+        <Label fx:id="weightRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="ownerHairColorLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="ownerHairColorField"/>
+        <Label fx:id="hairColorRest"/>
+    </HBox>
+    <HBox>
+        <Label fx:id="dateLabel" minWidth="80" alignment="CENTER"/>
+        <TextField fx:id="dateField" editable="false"/>
+        <Label fx:id="dateRest"/>
+    </HBox>
+    <VBox alignment="CENTER">
+        <Button fx:id="submitButton" onAction="#submitButton" alignment="CENTER"/>
+    </VBox>
+
+</VBox>

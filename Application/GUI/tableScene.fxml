@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.sun.javafx.scene.control.skin.TableHeaderRow?>
+<?import javafx.scene.canvas.Canvas?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      prefHeight="500.0" prefWidth="1300.0">
+    <MenuBar>
+        <Menu fx:id="userMenu" text="Пользователь">
+            <MenuItem fx:id="loginMenu" text="Войти" onAction="#loginMenu"/>
+            <MenuItem fx:id="logoutMenu" text="Выйти" onAction="#logoutMenu"/>
+        </Menu>
+        <Menu fx:id="viewMenu">
+            <MenuItem fx:id="tableView" onAction="#setTableView"/>
+            <MenuItem fx:id="visualView" onAction="#setVisualView"/>
+        </Menu>
+        <Menu fx:id="languageMenu">
+            <MenuItem fx:id="ruLang" onAction="#setRuLang"/>
+            <MenuItem fx:id="enLang" onAction="#setEnLang"/>
+            <MenuItem fx:id="eeLang"/>
+            <MenuItem fx:id="lvLang"/>
+        </Menu>
+    </MenuBar>
+
+    <HBox>
+        <VBox>
+            <Label fx:id="productsLabel" text="Продукты:" />
+            <HBox>
+
+                <TextField fx:id="keyFilter" onKeyReleased="#filter" prefWidth="75"/>
+                <TextField fx:id="idFilter" onKeyReleased="#filter" prefWidth="50"/>
+<!--                <TextField fx:id="nameFilter" onKeyReleased="#idFilter" prefWidth="75"/>-->
+            </HBox>
+            <TableView fx:id="productsTable" prefWidth="1150">
+                <columns>
+                    <TableColumn fx:id="keyColumn" text="key" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="idColumn" text="id" prefWidth="50" resizable="false"/>
+                    <TableColumn fx:id="nameColumn" text="name" prefWidth="100" resizable="false"/>
+                    <TableColumn fx:id="xColumn" text="x" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="yColumn" text="y" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="priceColumn" text="price" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="partNumberColumn" text="part number" prefWidth="150" resizable="false"/>
+                    <TableColumn fx:id="manCostColumn" text="manufacture cost" prefWidth="100" resizable="false"/>
+                    <TableColumn fx:id="uomColumn" text="unite of measure" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="ownerNameColumn" text="owner name" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="ownerHeightColumn" text="owner height" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="ownerWeightColumn" text="owner weight" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="ownerHairColorColumn" text="owner hair color" prefWidth="75" resizable="false"/>
+                    <TableColumn fx:id="creationDateColumn" text="creation date" prefWidth="75" resizable="false"/>
+                </columns>
+            </TableView>
+            <VBox fx:id="canvasContainer">
+            <Canvas fx:id="canvas" height="400" width="1150"/>
+                <HBox>
+                    <Button fx:id="scalePlus" text="+"  onAction="#scalePlus"/>
+                    <Button fx:id="scaleMinus" text="-" onAction="#scaleMinus"/>
+                </HBox>
+            </VBox>
+        </VBox>
+
+        <VBox spacing="10">
+            <Label text="Пользователь"/>
+            <HBox>
+                <Label fx:id="loginLabel"/>
+                <Label fx:id="userName"/>
+            </HBox>
+            <HBox>
+                <Label fx:id="colorLB"/>
+                <Label fx:id="colorLabel" text="    " />
+            </HBox>
+            <Button fx:id="showButton" onAction="#showButton" prefWidth="150"/>
+            <Button fx:id="insertButton" onAction="#insertButton" prefWidth="150" minWidth="100"/>
+            <Button fx:id="updateButton" onAction="#updateButton" prefWidth="150"/>
+            <Button fx:id="removeButton" onAction="#removeButton" prefWidth="150"/>
+            <Button fx:id="removeLwKeyButton" onAction="#removeLwButton" prefWidth="150"/>
+            <Button fx:id="removeGrKeyButton" onAction="#removeGrButton" prefWidth="150"/>
+            <Button fx:id="removeByUomButton" prefWidth="150"/>
+        </VBox>
+
+    </HBox>
+</VBox>
